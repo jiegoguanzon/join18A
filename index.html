@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://open.scdn.co/static/web-player.dc21809e.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="preload" href="https://open.scdn.co/fonts/CircularSpUIv3T-Light.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://open.scdn.co/fonts/CircularSpUIv3T-Book.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://open.scdn.co/fonts/CircularSpUIv3T-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+
+    </head>
+
+    <body>
+        <iframe name="hidden_iframe" id="hidden_iframe">
+        </iframe>
+        <div class="mainContainer">
+            <div class="blackGradient">
+                <div class="middleContainer">
+                    <div class="contentContainer">
+                        <form id="mainForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc_DbkTH41f-ZwY1veMvGmCbN56VKiiWyedrl83WW9q18_qkA/formResponse" method="post" target="hidden_iframe">
+                            <div id="formPage0">
+                                Form Page 0
+                            </div>
+                            <div id="formPage1">
+                                Form Page 1
+                                <div id="firstNameField">
+                                    <input type="text" name="entry.1303084487" placeholder="First Name">
+                                </div>
+                                <div id="lastNameField">
+                                    <input type="text" name="entry.1753081466" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div id="formPage2">
+                                Form Page 2
+                                <div id="courseField">
+                                    <select name="entry.382812467">
+                                        <option value="None" selected="selected" id="blank">Select One</option>
+                                        <option value="BS CoE">BS CoE</option>
+                                        <option value="BS EE">BS EE</option>
+                                        <option value="BS ECE">BS ECE</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="formPage3">
+                                Form Page 3
+                                <div id="contactNumber">
+                                    <input type="text" name="entry.371867106" placeholder="Contact No.">
+                                </div>
+                            </div>
+                            <div id="formPage4">
+                                Form Page 4
+                                <div id="questionField">
+                                    <input type="text" name="entry.428147834" placeholder="Why U.P. Circuit?">
+                                </div>
+                            </div>
+                            <div id="formPage5">
+                                Form Page 5
+                            </div>
+                        </form>
+                    </div>
+                    <div class="barContainer">
+                        <div class="playbar">
+                            <div class="controlButtons">
+                                <button id="shuffleButton" class="control-button spoticon-shuffle-16 control-button--active control-button--active-dot"></button>
+                                <button id="backButton" class="control-button spoticon-skip-back-16"></button>
+                                <button id="playButton" class="control-button spoticon-play-16 control-button--circled"></button>
+                                <button id="forwardButton" class="control-button spoticon-skip-forward-16"></button>
+                                <button id="repeatButton" class="control-button spoticon-repeatonce-16 control-button--active control-button--active-dot"></button>
+                            </div>
+                            <div class="playbackBar">
+                                <div class="progressTime">2:17</div>
+                                <div class="progressBar">
+                                    <div class="progressBarBG">
+                                        <div class="progressBarFG"></div>
+                                        <div class="progressBarSlider"></div>
+                                    </div>
+                                </div>
+                                <div class="progressTime">4:28</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
