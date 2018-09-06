@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-    if (screen.width < 700) {
-        document.location = "mobile.html"
-    }
-
     var formPage = 0;
     const MAX_FORM_PAGES = 5;
     const LAST_FORM_PAGE = 6;

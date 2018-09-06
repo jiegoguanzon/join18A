@@ -5,7 +5,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 iframe  {
@@ -19,11 +18,12 @@ iframe  {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     box-sizing: border-box;
     background-image: linear-gradient(90deg, #C074B2, #8AB5E8);
+    overflow: hidden;
     /*background-image: linear-gradient(rgb(57,80,96),rgb(6,8,10) 85%);*/
     /*background-image: linear-gradient(rgb(53,71,100),rgb(5,7,10) 85%);*/
     /*background-image: linear-gradient(rgb(86,80,67),rgb(9,8,7) 85%);*/
@@ -42,30 +42,12 @@ iframe  {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     box-sizing: border-box;
     background-image: linear-gradient(transparent, #000000);
 
-}
-
-.blackGradient::before {
-    box-flex: 1;
-    flex-grow: 1;
-    content: '';
-    display: block;
-    height: 24px;
-    min-height: 30px;
-}
-
-.blackGradient::after {
-    box-flex: 1;
-    flex-grow: 1;
-    content: '';
-    display: block;
-    height: 24px;
-    min-height: 30px;
 }
 
 .middleContainer {
@@ -93,6 +75,12 @@ iframe  {
     overflow: hidden;
     overflow-y: auto;
     padding: 48px 40px 20px;
+}
+
+.mainContent {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(#363636, #000000);
 }
 
 .barContainer {
@@ -128,6 +116,10 @@ iframe  {
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    background-color: #2D2D2D;
 }
 
 .progressTime {
@@ -231,13 +223,6 @@ input {
     font-size: 20px;
 }
 
-select {
-    background-color: transparent;
-    color: #FFFFFF;
-    border: 1px solid #404040;
-    font-size: 20px;
-}
-
 .textArea {
     height: 100%;
     width: 100%;
@@ -249,42 +234,4 @@ select {
     transition-delay: 2s;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
-}
-
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #CCC;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.genderField {
-    width: 100%;
-}
-
-.dobField {
-    width: 100%;
-}
-
-#courseField {
-    width: 100%;
-}
-
-#dob {
-    display: flex;
-    flex-direction: column;
-}
-
-#topDOB {
-    display: flex;
-    flex-direction: row;
-}
-
-#day {
-}
-
-#month {
 }
