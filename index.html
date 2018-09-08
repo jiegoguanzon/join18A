@@ -2,9 +2,17 @@
 <html>
 
     <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta property="og:title" content="UP Circuit Application Form 18A" />
+		<meta property="og:description" content="Click the link and try premium for free." />
+		<meta property="og:url"content="http://join.upcircuit.org" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>U.P. Circuit Application Form 18A</title>
 
+        <link rel="stylesheet" type="text/css" href="https://open.scdn.co/static/landing_page.8cb3dca0.css">
         <link rel="stylesheet" type="text/css" href="https://open.scdn.co/static/web-player.dc21809e.css">
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="preload" href="https://open.scdn.co/fonts/CircularSpUIv3T-Light.woff2" as="font" type="font/woff2" crossorigin="">
@@ -19,6 +27,12 @@
     <body>
         <iframe name="hidden_iframe" id="hidden_iframe">
         </iframe>
+
+        <audio id="clarity">
+            <source src="clarityLoopLongFade.mp3">
+            <source src="clarityLoopLongFade.ogg">
+        </audio>
+
         <div class="mainContainer">
             <div class="blackGradient">
                 <div class="logoCenter">
@@ -26,6 +40,7 @@
                 </div>
                 <div class="middleContainer">
                     <div class="contentContainer">
+                        <div class="mainFormDiv">
                         <form id="mainForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc_DbkTH41f-ZwY1veMvGmCbN56VKiiWyedrl83WW9q18_qkA/formResponse" method="post" target="hidden_iframe">
                             <div id="formPage0">
                                 Press play to start.
@@ -155,9 +170,9 @@
                                     <div class="genderField">
                                         <label for="gender">Gender</label>
                                         <div id="gender">
-                                            <input type="radio" name="gender" value="Male"> Male
-                                            <input type="radio" name="gender" value="Female"> Female
-                                            <input type="radio" name="gender" value="Non-binary"> Non-binary
+                                            <div><input type="radio" name="gender" value="Male"> Male</div>
+                                            <div><input type="radio" name="gender" value="Female"> Female</div>
+                                            <div><input type="radio" name="gender" value="Non-binary"> Non-binary</div>
                                         </div>
                                     </div>
                                 </div>
@@ -239,19 +254,20 @@
                                 </div>
                                 <div class="answerField">
                                     <div id="questionField">
-                                        <label for="lyrics">Shake Shake Body Body Dancer</label>
+                                        <label for="lyrics">Aking sinta, ikaw na ang...</label>
                                         <input type="text" id="lyrics" name="entry.428147834" placeholder="Be creative!">
                                     </div>
                                 </div>
                                 <div class="bottomArea">U.P. CIRCUIT</div>
                             </div>
                             <div id="formPage6">
-                                <button type="button" id="submitButton">Submit</button>
+                                <button type="button" id="submitButton" class="btn-landing btn-green">Submit</button>
                             </div>
                             <div id="formPage7">
                                 <div id="tyResponse">Your response has been received. Thank you!</div>
                             </div>
                         </form>
+                        </div>
                     </div>
                     <div class="barContainer">
                         <div class="playbar">

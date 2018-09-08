@@ -10,8 +10,18 @@ $(document).ready(function(){
 
     var repeatButtonState = 2;
 
-    var totalTimeString = "4:17";
-    var totalTimeInt = (4 * 60) + 17;
+    var totalTimeString = "4:16";
+    var totalTimeInt = (4 * 60) + 16;
+
+    var bgMusic = $("#clarity")[0];
+    var isPlaying = true;
+
+    bgMusic.addEventListener('ended', function() {
+        console.log("Made it");
+        this.currentTime = 0;
+        this.volume = 0.7;
+        this.play();
+    }, false);
 
     $(".logoCenter").css("opacity", "1");
 
@@ -50,7 +60,7 @@ $(document).ready(function(){
             $("#formPage" + formPage).show();
             $("#formPage" + formPage).css("opacity", "1");
         }
-
+        $(".mainFormDiv").css("margin-top", ($(".contentContainer").height() - $(".mainFormDiv").height()) / 2);
     });
 
     $(".logoCenter").click(function(){
@@ -59,6 +69,7 @@ $(document).ready(function(){
         $(".middleContainer").show();
         $(".middleContainer").css("opacity", "1");
         $("#formPage" + formPage).css("opacity", "1");
+        $(".mainFormDiv").css("margin-top", ($(".contentContainer").height() - $(".mainFormDiv").height()) / 2);
     });
 
     $("#shuffleButton").click(function(){
@@ -92,6 +103,7 @@ $(document).ready(function(){
             $("#formPage" + formPage).show();
             $("#formPage" + formPage).css("opacity", "1");
         }
+        $(".mainFormDiv").css("margin-top", ($(".contentContainer").height() - $(".mainFormDiv").height()) / 2);
         updateProgressBar();
     });
 
@@ -103,6 +115,7 @@ $(document).ready(function(){
             $("#formPage" + formPage).show();
             $("#formPage" + formPage).css("opacity", "1");
         }
+        $(".mainFormDiv").css("margin-top", ($(".contentContainer").height() - $(".mainFormDiv").height()) / 2);
         updateProgressBar();
     });
 
@@ -115,6 +128,9 @@ $(document).ready(function(){
             formPage++;
             $("#formPage" + formPage).show();
             $("#formPage" + formPage).css("opacity", "1");
+            bgMusic.volume = 0.7;
+            bgMusic.play();
+            bgMusic.animate({volume: 1}, 1000);
         }
         if (formPage == MAX_FORM_PAGES) {
             $("#playButton").toggleClass("spoticon-play-16");
@@ -125,6 +141,7 @@ $(document).ready(function(){
             $("#formPage" + formPage).show();
             $("#formPage" + formPage).css("opacity", "1");
         }
+        $(".mainFormDiv").css("margin-top", ($(".contentContainer").height() - $(".mainFormDiv").height()) / 2);
         updateProgressBar();
     });
 
