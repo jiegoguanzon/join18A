@@ -34,7 +34,6 @@ iframe  {
     /*background-color: #FFFFFF;*/
 }
 
-
 .blackGradient {
     display: -webkit-box;
     display: -moz-box;
@@ -47,7 +46,25 @@ iframe  {
     position: relative;
     box-sizing: border-box;
     background-image: linear-gradient(transparent, #000000);
+    justify-items: center;
+}
 
+.blackGradient::before {
+    box-flex: 1;
+    flex-grow: 1;
+    content: '';
+    display: block;
+    height: 24px;
+    min-height: 30px;
+}
+
+.blackGradient::after {
+    box-flex: 1;
+    flex-grow: 1;
+    content: '';
+    display: block;
+    height: 24px;
+    min-height: 30px;
 }
 
 .middleContainer {

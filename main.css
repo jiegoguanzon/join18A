@@ -164,7 +164,7 @@ iframe  {
     transition: width 1s;
 }
 
-#formPage0, #formPage1, #formPage2, #formPage3, #formPage4, #formPage5, #formPage6 {
+#formPage0, #formPage1, #formPage2, #formPage3, #formPage4, #formPage5, #formPage6, #formPage7 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,6 +265,9 @@ input[type=text], select {
     width: 100%;
 }
 
+#gender {
+}
+
 .dobField {
     width: 100%;
 }
@@ -283,8 +286,12 @@ input[type=text], select {
     flex-direction: row;
 }
 
-#day {
+#dayField {
+    margin-right: 10px;
 }
 
-#month {
+#tyResponse {
+    font-size: 64px;
+    width: 100%;
+    height: 100%;
 }

@@ -5,8 +5,8 @@ $(document).ready(function(){
     }
 
     var formPage = 0;
-    const MAX_FORM_PAGES = 5;
-    const LAST_FORM_PAGE = 6;
+    const MAX_FORM_PAGES = 6;
+    const LAST_FORM_PAGE = 7;
 
     var repeatButtonState = 2;
 
@@ -20,7 +20,33 @@ $(document).ready(function(){
     $("#formPage4").hide();
     $("#formPage5").hide();
     $("#formPage6").hide();
+    $("#formPage7").hide();
     updateProgressBar();
+
+    $("#submitButton").click(function(){
+        var emptyFieldCount = 0;
+        $(":text, select").each(function() {
+            if($(this).val() === "")
+                emptyFieldCount++;
+            if($(this).val() == "None")
+                emptyFieldCount++;
+        });
+
+        if (emptyFieldCount > 0)
+            alert("Complete all fields!");
+        else {
+            $("#mainForm").submit();
+
+            $("#playButton").toggleClass("spoticon-play-16");
+            $("#playButton").toggleClass("spoticon-pause-16");
+            $("#formPage" + formPage).hide();
+            $("#formPage" + formPage).css("opacity", "0");
+            formPage++;
+            $("#formPage" + formPage).show();
+            $("#formPage" + formPage).css("opacity", "1");
+        }
+
+    });
 
     $(".logoCenter").click(function(){
         $(".logoCenter").css("opacity", "0");
