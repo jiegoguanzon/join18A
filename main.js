@@ -10,6 +10,9 @@ $(document).ready(function(){
 
     var repeatButtonState = 2;
 
+    var totalTimeString = "4:17";
+    var totalTimeInt = (4 * 60) + 17;
+
     $(".logoCenter").css("opacity", "1");
 
     $(".middleContainer").hide();
@@ -22,6 +25,8 @@ $(document).ready(function(){
     $("#formPage6").hide();
     $("#formPage7").hide();
     updateProgressBar();
+
+    $("#totalTime").html(totalTimeString);
 
     $("#submitButton").click(function(){
         var emptyFieldCount = 0;
@@ -126,6 +131,17 @@ $(document).ready(function(){
     function updateProgressBar() {
         var barWidth = (formPage / MAX_FORM_PAGES) * 100;
         $(".progressBarFG").css("width", barWidth + "%");
+        updateElapsedTime();
+    }
+
+    function updateElapsedTime() {
+        var elapsedTimeInt = Math.round(totalTimeInt * (formPage / MAX_FORM_PAGES));
+        var elapsedTimeString = "" + Math.floor(elapsedTimeInt / 60) + ":";
+        if ((elapsedTimeInt % 60) < 10)
+            elapsedTimeString += "0" + (elapsedTimeInt % 60);
+        else
+            elapsedTimeString += (elapsedTimeInt % 60);
+        $("#elapsedTime").html(elapsedTimeString);
     }
 
 });

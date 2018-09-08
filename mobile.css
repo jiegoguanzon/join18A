@@ -49,16 +49,7 @@ iframe  {
     justify-items: center;
 }
 
-.blackGradient::before {
-    box-flex: 1;
-    flex-grow: 1;
-    content: '';
-    display: block;
-    height: 24px;
-    min-height: 30px;
-}
-
-.blackGradient::after {
+.spacerDiv {
     box-flex: 1;
     flex-grow: 1;
     content: '';
@@ -73,8 +64,8 @@ iframe  {
     background-image: linear-gradient(#363636, #000000);
     color: #ffffff;
     margin: 0 auto;
-    width: 450px;
-    min-height: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     border-radius: 8px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);

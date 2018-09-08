@@ -290,8 +290,9 @@ input[type=text], select {
     margin-right: 10px;
 }
 
-#tyResponse {
-    font-size: 64px;
+#tyResponse, #formPage0 {
+    font-size: 56px;
+    line-height: 56px;
     width: 100%;
     height: 100%;
 }

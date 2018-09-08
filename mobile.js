@@ -6,6 +6,9 @@ $(document).ready(function(){
 
     var repeatButtonState = 2;
 
+    $("body").css("min-height", screen.height);
+    $("body").css("min-width", screen.width);
+
     $(".logoCenter").css("opacity", "1");
 
     $(".middleContainer").hide();
@@ -24,6 +27,8 @@ $(document).ready(function(){
         $(".middleContainer").show();
         $(".middleContainer").css("opacity", "1");
         $("#formPage" + formPage).css("opacity", "1");
+        $(".spacerDiv").hide();
+        $(".contentContainer").css("min-height", screen.height - 90);
     });
 
     $("#shuffleButton").click(function(){
